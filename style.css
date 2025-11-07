@@ -220,3 +220,81 @@ body {
     font-size: 0.9rem;
     font-weight: 300;
 }
+/* ======================== */
+/* Estilos para la sección de contacto */
+/* ======================== */
+#contact.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+} /* Ajusta el padding según sea necesario */
+
+.contact-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+} /* Ajusta el max-width según sea necesario */
+
+.contact-card h2 {
+    margin-bottom: 1.5rem;
+    color: #722F37;
+} /* Título de la tarjeta */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+} /* Formulario de contacto */
+
+.contact-form label {
+    text-align: left;
+    display: block;
+    font-weight: 600;
+    color: #722F37;
+} /* Etiquetas de los campos */
+
+.contact-input,
+.contact-textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+} /* Estilos para los campos de entrada */
+
+.contact-textarea {
+    resize: none;
+} /* Evita que el textarea sea redimensionable */
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(114,47,55,0.08);
+} /* Estilos al enfocar los campos */
+
+.contact-button {
+    padding: 0.75rem;
+    background-color: #722F37;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.15s;
+} /* Estilos para el botón de envío */
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #8B1538;
+    transform: translateY(-1px);
+} /* Efecto hover y focus para el botón */
+
+@media (max-width: 480px) {
+    #contact.contact-section {
+        padding: 1rem;
+    }
+} /* Ajustes para pantallas pequeñas */
