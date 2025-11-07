@@ -6,6 +6,212 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+    
+    /* Variables CSS */
+    :root {
+        --promo-height: 550px;
+        --img-height: 275px;
+        --title-size: 3rem;
+    }
+    
+    #promociones {
+        padding: 60px 20px;
+        margin-top: 30px;
+        background: linear-gradient(135deg, #FDF5E6 0%, #F5F5DC 50%, #FDF5E6 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    #promociones::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23D4AF37" opacity="0.1"/></svg>') repeat;
+        background-size: 50px 50px;
+        z-index: 1;
+    }
+
+    #promociones > * { position: relative; z-index: 2; }
+
+    #promociones h2 {
+        font-family: "Merriweather", serif;
+        font-size: var(--title-size);
+        font-weight: 700;
+        color: #722F37;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    #promociones .text-center {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.2rem;
+        color: #8B1538;
+        font-weight: 400;
+        margin-bottom: 50px;
+        font-style: italic;
+    }
+
+    .promo-card {
+        background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+        padding: 25px;
+        border-radius: 20px;
+        border: 3px solid #D4AF37;
+        border-left: 6px solid #D4AF37;
+        margin-bottom: 30px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        height: var(--promo-height);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .promo-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        opacity: 0;
+    }
+
+    .promo-card:hover::before {
+        opacity: 1;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+
+    .promo-card:hover {
+        border-color: #8B1538;
+    }
+
+    .promo-card h3 {
+        font-family: "Merriweather", serif;
+        color: #722F37;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .promo-card p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #444;
+        position: relative;
+        z-index: 2;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .promo-card img {
+        border: 3px solid #D4AF37;
+        border-radius: 15px;
+        transition: all 0.4s ease;
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: 15px auto 0 auto;
+        width: 100%;
+        height: var(--img-height);
+        object-fit: cover;
+        object-position: center;
+        flex-shrink: 0;
+    }
+
+    .promo-card img:hover {
+        transform: scale(1.05) rotate(2deg);
+        border-color: #8B1538;
+    }
+
+    .promo-card:nth-child(1) { animation-delay: 0.2s; }
+    .promo-card:nth-child(2) { animation-delay: 0.4s; }
+    .promo-card:nth-child(3) { animation-delay: 0.6s; }
+    .promo-card:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Media Queries Optimizadas */
+    @media (max-width: 992px) {
+        :root {
+            --promo-height: 500px;
+            --img-height: 220px;
+            --title-size: 2.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        :root {
+            --promo-height: 480px;
+            --img-height: 200px;
+            --title-size: 2.2rem;
+        }
+        
+        #promociones { padding: 40px 15px; margin-top: 20px; }
+        #promociones h2 { margin-bottom: 25px; }
+        #promociones .text-center { font-size: 1.1rem; margin-bottom: 40px; }
+        .promo-card { padding: 20px; margin-bottom: 20px; }
+        .promo-card h3 { font-size: 1.3rem; min-height: 45px; }
+        .promo-card p { font-size: 0.95rem; line-height: 1.5; }
+        .promo-card img { margin: 10px auto 0 auto; }
+    }
+    
+    @media (max-width: 576px) {
+        :root {
+            --promo-height: auto;
+            --img-height: 180px;
+            --title-size: 1.8rem;
+        }
+        
+        #promociones { padding: 30px 10px; margin-top: 15px; }
+        #promociones h2 { margin-bottom: 20px; }
+        #promociones .text-center { font-size: 1rem; margin-bottom: 30px; padding: 0 10px; }
+        .promo-card { min-height: 420px; padding: 15px; margin-bottom: 15px; }
+        .promo-card h3 { font-size: 1.2rem; min-height: 40px; margin-bottom: 10px; }
+        .promo-card p { font-size: 0.9rem; line-height: 1.4; margin-bottom: 10px; }
+        .col-md-6 { margin-bottom: 15px; }
+    }
+    
+    @media (max-width: 400px) {
+        :root {
+            --img-height: 160px;
+            --title-size: 1.6rem;
+        }
+        
+        #promociones { padding: 20px 8px; }
+        #promociones .text-center { font-size: 0.95rem; }
+        .promo-card { min-height: 380px; padding: 12px; }
+        .promo-card h3 { font-size: 1.1rem; }
+        .promo-card p { font-size: 0.85rem; }
+    }
+</style>
 </head>
 <body>
     <header>
@@ -37,33 +243,36 @@
                     
                     <div class="carousel-item active" data-bs-interval="5000">
                         <img src="img/Pupusas.jpg" class="d-block w-100 carousel-img" alt="Pupusas con curtido">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="merriweather-font">El Sabor Auténtico de la Tradición</h5>
-                            <p>Recetas auténticas, frescas y hechas a mano.</p>
+                        <div class="carousel-caption">
+                            <h5 class="d-none d-md-block">El Sabor Auténtico de la Tradición</h5>
+                            <p class="d-none d-md-block">Recetas auténticas, frescas y hechas a mano.</p>
                             <a href="#menu" class="btn btn-lg custom-carousel-btn">Ver Menú Completo</a>
                         </div>
                     </div>
 
                     <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/pescado.jpg" class="d-block w-100 carousel-img" alt="Tamales de elote">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="merriweather-font">Ingredientes Locales y Frescos</h5>
-                            <p>Calidad inigualable en cada bocado.</p>
+                        <div class="carousel-caption">
+                            <h5 class="d-none d-md-block">Ingredientes Locales y Frescos</h5>
+                            <p class="d-none d-md-block">Calidad inigualable en cada bocado.</p>
+                            <a href="#menu" class="btn btn-lg custom-carousel-btn">Ver Menú Completo</a>
                         </div>
                     </div>
 
                     <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/Carne.jpg" class="d-block w-100 carousel-img" alt="Deliciosa carne asada">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="merriweather-font">Carnes Premium</h5>
-                            <p>Cortes selectos preparados a la perfección.</p>
+                        <div class="carousel-caption">
+                            <h5 class="d-none d-md-block">Carnes Premium</h5>
+                            <p class="d-none d-md-block">Cortes selectos preparados a la perfección.</p>
+                            <a href="#menu" class="btn btn-lg custom-carousel-btn">Ver Menú Completo</a>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/Horchata.jpg" class="d-block w-100 carousel-img" alt="Refrescante horchata">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="merriweather-font">Bebidas Tradicionales</h5>
-                            <p>Horchata fresca y natural como en casa.</p>
+                        <div class="carousel-caption">
+                            <h5 class="d-none d-md-block">Bebidas Tradicionales</h5>
+                            <p class="d-none d-md-block">Horchata fresca y natural como en casa.</p>
+                            <a href="#menu" class="btn btn-lg custom-carousel-btn">Ver Menú Completo</a>
                         </div>
                     </div>
                     
@@ -81,9 +290,65 @@
             </div>
         </section>
         
+        <section id="promociones" class="container">
+            <h2>Promociones</h2>
+            <p class="text-center mb-5">
+              En nuestro restaurante creemos que compartir el sabor de El Salvador debe ser accesible para todos.
+              Por eso, cada semana te traemos promociones especiales pensadas para consentirte y celebrar nuestras tradiciones.
+            </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="promo-card">
+                  <h3>🎉 Promoción de la Semana</h3>
+                  <p>
+                    Disfruta 2 pupusas + bebida natural por solo $3.99.
+                    <br><br>
+                    Disponible de lunes a viernes, de 2:00 p.m. a 5:00 p.m.
+                  </p>
+                  <img src="https://twyzle-s3-1.s3.amazonaws.com/networks/1/sites/12540/el-palmar-restaurant-comida-salvadorena-oferta-2-pupusas-500x300.jpg" class="img-fluid rounded mb-3" alt="Cliente feliz con PROMO">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="promo-card">
+                  <h3>👨‍👩‍👧‍👦 Combo Familiar</h3>
+                  <p>
+                    Ideal para 4 personas: 8 pupusas surtidas, 4 bebidas y 1 postre típicopor $14.99.
+                    <br><br>
+                    Perfecto para compartir en casa o en nuestro local.
+                  </p>
+                  <img src="https://www.tipicosmargoth.com/wp-content/uploads/2020/05/COMBO-MARGOTH-TIPICOS-MARGOTH.jpg" class="img-fluid rounded mb-3" alt="Familia feliz con COMBO">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="promo-card">
+                  <h3>🌽 Martes de Maíz</h3>
+                  <p>
+                    Todos los martes, recibe una pupusa extra GRATIS por cada 3 que compres.
+                    <br><br>
+                    Aplica en pupusas de maíz tradicionales.
+                  </p>
+                  <img src="https://www.allrecipes.com/thmb/yb529FVtahJeEwPcHGWGM9EAmsg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5061638-93061a303c0047b68e1d2ef3ed113952.jpg" class="img-fluid rounded mb-3" alt="Cliente feliz con PUPUSA GRATIS">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="promo-card">
+                  <h3>🎂 Cumpleañeros Promos</h3>
+                  <p>
+                    Si celebrás tu cumpleaños con nosotros, te regalamos un postre típico y una bebida.
+                    <br><br>
+                    Solo presentá tu DUI o documento de identidad.
+                  </p>
+                  <img src="https://gastronomiancestral.info.sv/wp-content/uploads/06d.jpg" class="img-fluid rounded mb-3" alt="Cumpleañero feliz con postre">
+                </div>
+              </div>
+            </div>
+        </section>
   
     </main>
-
 
 <footer id="footer" class="main-footer">
     <div class="container footer">
