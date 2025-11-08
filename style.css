@@ -208,7 +208,7 @@ body {
     min-height: 120px;
 } 
 
-/* Estilo de la lista desplegable y que al pasar el ratón en cada una de las opciones se ponga en color dorado */
+/* Estilo de la lista desplegable */
 .contact-form select {
     width: 100%;
     padding: 10px;
@@ -500,5 +500,6 @@ body, html {
         gap: 4px;
     }
 }
+
 
 
