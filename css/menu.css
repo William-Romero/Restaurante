@@ -1,83 +1,128 @@
-/* -----1. Estructura 3 colummnas(layout) responsivo con los estilos y tipografia de  main.css ----- */
-
+/* Layout principal */
 .menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-.col {
-    flex: 1 1 300px; /* crece, encoge, tamaño base */
-    max-width: 450px;
-    min-width: 280px;
-}
-
-/* -----2. diseño de secciones y titulos----- */
-
-/*----- Titulo "menú" (h2) siguiendo (color, fuente, tamaño) de main.css ----- */
-.section-heading {
-    text-align: center;
-}
-/* ----- Espacio entre secciones ----- */
+/* Secciones del menú */
 .menu-section {
-    margin-bottom: 30px;
-    
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
-/* ----- Subtítulos de secciones (h3) ----- */
+
+.section-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ddd;
+}
+
 .section-title h3 {
-    border-bottom: 3px solid #eee;
-    padding-bottom: 10px;
-}
-/* ----- Subtítulos de subsecciones (h4) ----- */
-.submenu-title h4 {
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 6px;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
 }
 
-/*diseño de cada item del menú (nombre, descripción, precio) siguiendo main.css */
-.section-grid .item h5 {
-    display: flex;
+/* Grid de items */
+.section-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 1rem;
     align-items: center;
-    gap: 15px;
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
 }
 
-/*la imagen miniatura del menú*/
-.section-grid .thumb {
+.section-grid:last-child {
+    border-bottom: none;
+}
+
+/* Imágenes */
+.thumb {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    flex-shrink: 0;
+    border-radius: 8px;
 }
 
-/* Contenedor del tituto (h5) y descripción (p) */
-.section-grid .item {
-    flex-grow: 1;
+/* Información del item */
+.item {
+    padding: 0 1rem;
 }
 
-/*precio del item del menú*/
-.section-grid .price {
+.item h5 {
+    margin: 0 0 0.5rem 0;
     font-size: 1.1rem;
-    font-weight: 700;
-    color: #333;
-    flex-shrink: 0;
-    padding-left: 10px;
+    color: #222;
 }
 
-/*Ajuste para moviles*/
-@media (max-width: 768px) {
-    .menu-container {
-       width: 100%;
-       margin: 0;
-       padding: 15px;
+.item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Precio */
+.price {
+    font-weight: bold;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+/* Submenu sections */
+.submenu-section {
+    margin: 2rem 0 1rem;
+}
+
+.submenu-title h4 {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Media Queries */
+/* Tablets (768px and up) */
+@media screen and (min-width: 768px) {
+    .section-grid {
+        grid-template-columns: 100px 1fr auto;
     }
+    
+    .thumb {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .menu-section {
+        margin-bottom: 0;
+    }
+}
+
+/* Hover effects */
+.section-grid:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.thumb:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
