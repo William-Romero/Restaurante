@@ -10,6 +10,7 @@
     --color-h6: #8B1538;
     --color-borde-titulo: #D4AF37; 
     --color-precio: #350bf5;
+    --color-bottom: #D4AF37;
     
     /* Tipografías */
     --fuente-parrafo: "Source Sans Pro", sans-serif;
@@ -59,7 +60,7 @@
 
 /* Contenedor de cada sección (Entradas, Postres, etc.) */
 .menu-section {
-    background: #E3DAC9;
+    background: #FDF5E6;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 1.5rem;
@@ -132,6 +133,22 @@
     font-size: 1.1rem;
     font-family: var(--fuente-parrafo);
 }
+/*Estilo del boton para dezplazarse hacia arriba con flecha con los colores que vienen segun main.css*/
+#myBtn {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* Asegura que esté por encima de otros elementos */
+    border: none;
+    outline: none;
+    background-color: var(--wine); /* Color de fondo */
+    background-color: var(--color-bottom); /* Color del icono */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
 
 /* 4. Responsividad (Móvil) */
 /* (Nota: Gran parte de la responsividad ya se manejó arriba "mobile-first") */
@@ -155,4 +172,3 @@
         height: 60px;
     }
 }
-/* Fin de css/menu.css */
