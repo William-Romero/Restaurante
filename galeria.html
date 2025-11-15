@@ -9,7 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-<!-- CSS -->
+<!-- Css -->
 <link rel="stylesheet" href="css/galeria.css">
 </head>
 
@@ -34,7 +34,7 @@
   <p class="text-center text-muted mb-5">Descubre la variedad de sabores salvadoreños en cada plato.</p>
 
   <div class="row justify-content-between align-items-start">
-    <!-- ======= IZQUIERDA: ESPECIALES DEL DÍA ======= -->
+    <!-- ======= Especial del dia ======= -->
     <aside class="col-lg-2 col-md-3 mb-4 text-center">
       <h5 class="fw-bold mb-3">Especiales del Día</h5>
       <img src="https://cdn7.kiwilimon.com/recetaimagen/2806/400x400/25790.jpg.webp" class="img-fluid rounded mb-3 shadow-sm" alt="pupusas">
@@ -45,10 +45,10 @@
       </div>
     </aside>
 
-    <!-- ======= CENTRO: PLATILLOS ======= -->
+    <!-- ======= Platillos ======= -->
     <section class="col-lg-7 col-md-6">
       <div class="row justify-content-center g-4">
-        <!-- CARD 1 - ENTRADAS -->
+        <!-- Entrada -->
         <div class="col-md-6">
           <div class="card card-platillo shadow-sm border-0" data-index="0">
             <h5 class="text-center card-title mt-3">Entradas</h5>
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <!-- CARD 2 - PLATOS FUERTES -->
+        <!-- platos fuertes -->
         <div class="col-md-6">
           <div class="card card-platillo shadow-sm border-0" data-index="1">
             <h5 class="text-center card-title mt-3">Platos Fuertes</h5>
@@ -81,9 +81,9 @@
         </div>
       </div>
 
-      <!-- FILA 2 -->
+      <!-- fila 2  -->
       <div class="row justify-content-center g-4 mt-4">
-        <!-- CARD 3 - BEBIDAS -->
+        <!-- Bebidas -->
         <div class="col-md-6">
           <div class="card card-platillo shadow-sm border-0" data-index="2">
             <h5 class="text-center card-title mt-3">Bebidas</h5>
@@ -99,7 +99,7 @@
           </div>
         </div>
 
-        <!-- CARD 4 - POSTRES -->
+        <!-- Postres -->
         <div class="col-md-6">
           <div class="card card-platillo shadow-sm border-0" data-index="3">
             <h5 class="text-center card-title mt-3">Postres</h5>
@@ -117,7 +117,7 @@
       </div>
     </section>
 
-    <!-- ======= DERECHA: SERVICIOS ======= -->
+    <!-- ======= Servicios ======= -->
     <aside class="col-lg-2 col-md-3 mb-4 text-center">
       <h5 class="fw-bold mb-3">Nuestros Servicios</h5>
       <div class="mb-4">
@@ -133,15 +133,31 @@
   </div>
 </main>
 
-<footer id="footer" class="main-footer text-center mt-5 py-4">
-  <div class="container">
-    <p><a href="#"><i class="bi bi-whatsapp"></i> +503 6973-9021</a></p>
-    <p><a href="#"><i class="bi bi-envelope"></i> contacto@salvadoreanbites.com</a></p>
-    <small>© 2025 Salvadorean Bites. Todos los derechos reservados.</small>
-  </div>
-</footer>
+ <footer id="footer" class="main-footer">
 
-<!-- JS: cambia solo la imagen dentro de cada tarjeta -->
+            <div class="container footer">
+                <p><a href="https://wa.me/50369739021"><i class="bi bi-whatsapp"></i> +503 6973-9021</a></p>
+                <p><a href="tel:+50322223333"><i class="bi bi-telephone"></i> +503 2222-3333</a></p>
+                <p><a href="mailto:contacto@salvadoreanbites.com"><i class="bi bi-envelope"></i> contacto@salvadoreanbites.com</a></p>
+                <p><a href="https://maps.app.goo.gl/uDmknGGWLnzTpY1L8" target="_blank"><i class="bi bi-geo-alt"></i> Unicentro Soyapango, San Salvador</a></p>
+                <div class="reservation-button">
+                    <a href="Reservas.html" class="btn-reservation">
+                        <i class="bi bi-calendar-check"></i> ¡Haz tu reserva hoy!
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/salvadorean_bites?igsh=N204cXpnN2x5aXZl&utm_source=qr" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BQvKdoDMD/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@salvadoreanbites" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://wa.me/50369739021" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+
+                <small>© 2025 Salvadorean Bites. Todos los derechos reservados.</small>
+            </div>
+        </footer>
+
+<!-- cambia la foto de la categoria -->
 <script>
 const platillos = [
   [
@@ -192,5 +208,6 @@ function cambiarImagen(btn, dir) {
 </script>
 </body>
 </html>
+
 
 
