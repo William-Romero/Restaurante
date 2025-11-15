@@ -1,46 +1,30 @@
-/* ==========================
-   GENERAL
-========================== */
+/* Fondo general */
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #FFF8E8;
   font-family: "Source Sans Pro", sans-serif;
-  background-color: #FFF8E8; /* Fondo crema suave */
 }
 
 /* TITULOS */
 h1, h3, h5 {
-  font-family: "Merriweather", serif;
-  color: #7A2E2E;
+  font-family: "Merriweather", serif !important;
+  color: #7A2E2E !important;
 }
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-}
-
-h5 {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-/* ==========================
-   TARJETAS DE PLATILLOS
-========================== */
+/* Tarjetas de platillos */
 .card-platillo {
-  border-radius: 18px;
+  background: #fff !important;
+  border: 1px solid #f1e1c9 !important;
+  border-radius: 18px !important;
   overflow: hidden;
-  background: #fff;
-  padding-bottom: 10px;
-  transition: 0.3s;
-  border: 1px solid #f1e1c9;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-platillo:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
+/* Imagen dentro de tarjeta */
 .platillo-img {
   height: 220px;
   width: 100%;
@@ -48,74 +32,71 @@ h5 {
   border-bottom: 4px solid #D4AF37;
 }
 
-.card-title {
-  color: #7A2E2E;
-  font-weight: bold;
-}
-
 /* Texto de descripción */
 .platillo-desc {
   font-size: 0.95rem;
-  color: #444;
+  color: #444 !important;
 }
 
-/* ==========================
-   BOTONES
-========================== */
-.btn-custom {
-  background-color: #D4AF37;
+/* Título de la categoría */
+.card-title {
   color: #7A2E2E !important;
-  padding: 10px 20px;
-  font-weight: 700;
-  border-radius: 12px;
-  text-decoration: none;
-  display: inline-block;
-  border: none;
-  transition: 0.3s;
-  cursor: pointer;
+  font-weight: 700 !important;
 }
 
-.btn-custom:hover {
-  background-color: #fff;
-  color: #7A2E2E !important;
-  border: 1px solid #D4AF37;
-}
-
-/* Botones de navegación */
+/* Botones de navegación dentro de las tarjetas */
 .btn-nav {
-  background-color: #D4AF37;
-  color: #7A2E2E;
-  border: none;
-  padding: 8px 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 0 5px;
+  background-color: #D4AF37 !important;
+  color: #7A2E2E !important;
+  border: none !important;
+  padding: 8px 15px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
   transition: 0.2s;
 }
 
 .btn-nav:hover {
-  background-color: #b99527;
+  background-color: #b99527 !important;
 }
 
-/* ==========================
-   ASIDE (solo tarjetas internas)
-========================== */
+/* Botones personalizados del Aside */
+.btn-custom {
+  background-color: #D4AF37 !important;
+  color: #7A2E2E !important;
+  padding: 10px 20px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  display: block;
+  border: none;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background-color: #fff !important;
+  color: #7A2E2E !important;
+  border: 1px solid #D4AF37 !important;
+}
+
+/* Aside (especiales y servicios) */
 aside {
-  background: #FFF;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  border: 1px solid #f5e0c4;
+  background: #FFF !important;
+  padding: 20px !important;
+  border-radius: 20px !important;
+  border: 1px solid #f5e0c4 !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1) !important;
 }
 
+/* Imágenes dentro del aside */
 aside img {
-  border-radius: 15px;
-  border: 3px solid #D4AF37;
+  border-radius: 15px !important;
+  border: 3px solid #D4AF37 !important;
 }
 
+/* Títulos del aside */
 aside h5 {
-  border-bottom: 2px solid #D4AF37;
-  padding-bottom: 8px;
+  border-bottom: 2px solid #D4AF37 !important;
+  padding-bottom: 8px !important;
 }
+
 
