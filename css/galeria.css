@@ -244,7 +244,7 @@ aside img {
 /* ============================ footer ============================ */
 
 footer.main-footer {
-  background-color: #6B2E34; /* color vino */
+  background-color: #6B2E34;
   color: #fff;
   text-align: center;
   padding: 48px 20px;
@@ -371,3 +371,4 @@ footer.main-footer small {
     font-size: 1.2rem;
   }
 }
+
