@@ -1,108 +1,99 @@
 /* ==========================
-   GENERAL
+   ESTILOS GENERALES
 ========================== */
 body {
-  background-color: #FFF6E5 !important; /* Fondo crema suave */
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-/* Títulos */
-h1, h5 {
-  font-family: "Merriweather", serif;
-  color: #7A2E2E;
+  font-family: Arial, sans-serif;
+  background-color: #faf6f2;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 /* ==========================
-   TARJETAS
+   CONTENEDOR PRINCIPAL
 ========================== */
-.card-platillo {
-  border-radius: 18px !important;
-  overflow: hidden;
+.menu-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ==========================
+   TITULOS
+========================== */
+h2 {
+  text-align: center;
+  color: #a83232;
+  text-transform: lowercase;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* ==========================
+   TARJETAS DE PLATILLOS
+========================== */
+.menu-item {
   background: #fff;
-  padding-bottom: 10px;
-  border: 1px solid #F0D9B5 !important;
-  transition: 0.25s ease;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card-platillo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.platillo-img {
-  height: 220px;
-  width: 100%;
+/* Imagen del platillo */
+.menu-item img {
+  width: 180px;
+  height: 140px;
   object-fit: cover;
-  border-bottom: 4px solid #D4AF37; /* Línea dorada */
-}
-
-.card-title {
-  color: #7A2E2E !important;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.platillo-desc {
-  color: #444;
-  font-size: 0.95rem;
-}
-
-/* ==========================
-   BOTONES DENTRO DE TARJETAS
-========================== */
-.btn-nav {
-  background-color: #D4AF37;
-  color: #7A2E2E;
-  border: none;
-  padding: 8px 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btn-nav:hover {
-  background-color: #b99527;
-}
-
-/* ==========================
-   BOTONES PERSONALIZADOS (ASIDE)
-========================== */
-.btn-custom {
-  background-color: #D4AF37;
-  color: #7A2E2E !important;
-  padding: 10px;
-  font-weight: 700;
   border-radius: 10px;
-  border: 2px solid transparent;
-  transition: 0.25s;
+  margin-right: 1.5rem;
 }
 
-.btn-custom:hover {
-  background-color: #fff;
-  border-color: #D4AF37;
-  color: #7A2E2E !important;
+/* Texto dentro de cada tarjeta */
+.menu-item div {
+  flex: 1;
+}
+
+/* Nombre del platillo */
+.menu-item h3 {
+  margin: 0;
+  color: #a83232;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+/* Descripción */
+.menu-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Precio */
+.menu-item span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #a83232;
+  font-size: 1.1rem;
 }
 
 /* ==========================
-   ASIDE (Especiales del día / Servicios)
+   RESPONSIVE
 ========================== */
-aside {
-  background: #fff;
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid #F0D9B5;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
+@media (max-width: 700px) {
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
-aside img {
-  border-radius: 14px;
-  border: 3px solid #D4AF37;
+  .menu-item img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 90%;
+    height: auto;
+  }
 }
-
-aside h5 {
-  border-bottom: 2px solid #D4AF37;
-  padding-bottom: 6px;
-  color: #7A2E2E;
-}
-
