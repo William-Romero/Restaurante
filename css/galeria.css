@@ -1,102 +1,108 @@
-/* Fondo general */
+/* ==========================
+   GENERAL
+========================== */
 body {
-  background-color: #FFF8E8;
+  background-color: #FFF6E5 !important; /* Fondo crema suave */
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* TITULOS */
-h1, h3, h5 {
-  font-family: "Merriweather", serif !important;
-  color: #7A2E2E !important;
+/* Títulos */
+h1, h5 {
+  font-family: "Merriweather", serif;
+  color: #7A2E2E;
 }
 
-/* Tarjetas de platillos */
+/* ==========================
+   TARJETAS
+========================== */
 .card-platillo {
-  background: #fff !important;
-  border: 1px solid #f1e1c9 !important;
   border-radius: 18px !important;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  padding-bottom: 10px;
+  border: 1px solid #F0D9B5 !important;
+  transition: 0.25s ease;
 }
 
 .card-platillo:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Imagen dentro de tarjeta */
 .platillo-img {
   height: 220px;
   width: 100%;
   object-fit: cover;
-  border-bottom: 4px solid #D4AF37;
+  border-bottom: 4px solid #D4AF37; /* Línea dorada */
 }
 
-/* Texto de descripción */
-.platillo-desc {
-  font-size: 0.95rem;
-  color: #444 !important;
-}
-
-/* Título de la categoría */
 .card-title {
   color: #7A2E2E !important;
-  font-weight: 700 !important;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
-/* Botones de navegación dentro de las tarjetas */
+.platillo-desc {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ==========================
+   BOTONES DENTRO DE TARJETAS
+========================== */
 .btn-nav {
-  background-color: #D4AF37 !important;
-  color: #7A2E2E !important;
-  border: none !important;
-  padding: 8px 15px !important;
-  font-weight: 600 !important;
-  border-radius: 8px !important;
+  background-color: #D4AF37;
+  color: #7A2E2E;
+  border: none;
+  padding: 8px 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .btn-nav:hover {
-  background-color: #b99527 !important;
+  background-color: #b99527;
 }
 
-/* Botones personalizados del Aside */
+/* ==========================
+   BOTONES PERSONALIZADOS (ASIDE)
+========================== */
 .btn-custom {
-  background-color: #D4AF37 !important;
+  background-color: #D4AF37;
   color: #7A2E2E !important;
-  padding: 10px 20px !important;
-  font-weight: 700 !important;
-  border-radius: 12px !important;
-  display: block;
-  border: none;
-  transition: 0.3s;
-  text-decoration: none;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: 0.25s;
 }
 
 .btn-custom:hover {
-  background-color: #fff !important;
+  background-color: #fff;
+  border-color: #D4AF37;
   color: #7A2E2E !important;
-  border: 1px solid #D4AF37 !important;
 }
 
-/* Aside (especiales y servicios) */
+/* ==========================
+   ASIDE (Especiales del día / Servicios)
+========================== */
 aside {
-  background: #FFF !important;
-  padding: 20px !important;
-  border-radius: 20px !important;
-  border: 1px solid #f5e0c4 !important;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1) !important;
+  background: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #F0D9B5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Imágenes dentro del aside */
 aside img {
-  border-radius: 15px !important;
-  border: 3px solid #D4AF37 !important;
+  border-radius: 14px;
+  border: 3px solid #D4AF37;
 }
 
-/* Títulos del aside */
 aside h5 {
-  border-bottom: 2px solid #D4AF37 !important;
-  padding-bottom: 8px !important;
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 6px;
+  color: #7A2E2E;
 }
-
 
