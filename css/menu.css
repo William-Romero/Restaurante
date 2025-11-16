@@ -9,7 +9,7 @@
     --color-h5: #722F37; /* títulos de items */
     --color-h6: #8B1538;
     --color-borde-titulo: #D4AF37; 
-    --color-precio: #350bf5;
+    --color-precio: #8B1538;
     --color-bottom: #D4AF37;
     
     /* Tipografías */
@@ -132,6 +132,7 @@
     color: var(--color-precio); /* ¡Usando tu variable! */
     font-size: 1.1rem;
     font-family: var(--fuente-parrafo);
+
 }
 /*Estilo del boton para dezplazarse hacia arriba con flecha con los colores que vienen segun main.css*/
 #myBtn {
